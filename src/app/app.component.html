@@ -1,0 +1,25 @@
+<div class="container">
+  <div>
+    <app-navbar></app-navbar>
+  </div>
+  <div class="my-div">
+    
+    hello {{ user.firstname }} {{ user.lastname  }}
+    <button (click)="onClick()">Hello</button>
+    <button (click)="onAgeToggle()">Toggle Age</button>
+    @if(isDisplayed){
+      <div>Your age is <b>{{ user.age }}</b></div>
+      <app-main-content [shownUsers]="users"></app-main-content>
+    } @else {
+      <div>Age not shown</div>
+    }
+  </div>
+  <div>
+    <app-footer></app-footer>
+  </div>
+</div>
+
+
+
+
+
